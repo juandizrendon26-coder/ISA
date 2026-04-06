@@ -1,0 +1,795 @@
+/*                        */
+*{                                                                              /*   selecciona todos los elementos del HTML.                     */
+    margin: 0;                                                                  /*    (margin) controla el espacio exterior de un elemento, controla las margenes que el navegador de por defecto.                     */
+    padding: 0;                                                                 /*    (padding) no hay espacio interno entonces el contenido queda pegado al borde.                     */
+    box-sizing: border-box;                                                     /*    (box-sizing) Controla cómo se calcula el tamaño de un elemento. el ancho sí incluye padding y borde.               */
+}                                                                               /*    Cierra el bloque del selector.                    */
+
+
+
+
+body{                                                                            /*   body es el selector del cuerpo de la página. Todo lo que esté dentro del <body> en el HTML recibe estos estilos.                      */
+
+    background: #310404;                                                       /*  (background) define el color o fondo de la página.en este caso es vino tinto.                       */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;                /*  (font-family) define la fuente del texto. osea el tipo de letra en este caso 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif                      */
+}                                                                                /*   Cierra el bloque de estilos del body.                      */
+
+
+
+
+header{                                                                           /*  (header) selecciona la etiqueta <header> del html y aqui tenemos el titulo de la pagina y el logo.                     */
+    background: linear-gradient(135deg, #800020, #000000);                    /*  (background: linear-gradient) aqui se aplica color al fondo del titulo osea donde dice ISA. el  linear-gradient crea un degradado de colores, se especifica la direccion diagonal y despues los dos colores que quieres degradar.                      */
+    height: 100px;                                                                /*   (height) Define la altura del header.                     */
+    display: flex;                                                                /*   (display: flex) Activa Flexbox. Flexbox es un sistema de CSS que permite alinear elementos fácilmente.                     */
+    justify-content: center;                                                      /*   (justify-content) Centra los elementos horizontalmente.                     */
+    align-items: center;                                                          /*   (align-items) Centra los elementos verticalmente. este con el (justify-content): center , ayuda a centrar correctamente.                    */
+}                                                                                 /*   Cierra el bloque del header.                     */
+
+
+
+
+header h1{                                                                         /*  Este selector significa que el h1 que está dentro del header                      */
+    display: flex;                                                                 /*   (display: flex) Activa flexbox dentro del título. Esto sirve para alinear el texto y la imagen del título.                         */
+    align-items: center;                                                           /*   (align-items) Alinea verticalmente los elementos del h1.                         */
+    gap: 15px;                                                                     /*   (gap) agrega espacio entre los elementos dentro del flex.  deja 15 píxeles de separación entre el texto y la imagen.                        */
+}                                                                                  /*  Cierra el bloque de estilos del header h1                          */
+
+
+
+
+nav{                                                                                /*   (nav) es el selector de la etiqueta HTML: Esta etiqueta normalmente contiene el menú de navegación de la página, por ejemplo: Inicio, Contenido, Galería, Datos, Contacto                        */
+    background: linear-gradient(135deg, #a92747, #000000);                      /*   (background: linear-gradient) aqui se aplica color al menu de navegacion. el  linear-gradient crea un degradado de colores, se especifica la direccion diagonal y despues los dos colores que quieres degradar.                         */
+    height: 50px;                                                                   /*   (height) Define la altura del nav.                     */
+    border-bottom: 3px solid #170202;                                             /*   (border-bottom) Crea un borde inferior para el nav. (solid) hace que el borde sea continuo.                     */
+}                                                                                   /*   Cierra el bloque del nav.                     */
+
+
+
+
+nav ul li{                                                                         /*   selecciona los li que están dentro de ul dentro de nav.                         */
+    float: left;                                                                   /*   (float) left.  mueve los elementos hacia la izquierda.                         */
+    list-style: none;                                                              /*   (list-style) elimina los puntos que se colocan al frente de cada tema de la lista.                         */
+    margin: 10px 20px;                                                             /*   (margin) agrega margen alrededor de los elementos el primero es hacia arriba y hacia abajo el segundo valor es de derecha a izquierda.                         */
+    line-height: 30px;                                                             /*   (line-height) define la altura de la línea del texto. ayuda a que el texto del menú quede más centrado verticalmente dentro del menú.                        */
+}                                                                                  /*   Cierra el bloque del nav ul li.                         */
+
+
+
+
+
+nav ul li a{                                                                      /*   (nav ul li a) selecciona los enlaces del menú.                         */
+    color: rgb(23, 1, 1);                                                       /*   (color) define el color del texto del enlace.                         */
+    text-decoration: none;                                                        /*   (text-decoration) elimina el subrayado que el enlace tiene por defecto.                         */
+    font-weight: bold;                                                            /*   (font-weight) hace que el texto del enlace este en negrita.                         */
+}                                                                                 /*   Cierra el bloque del nav ul li a.                         */
+
+
+
+
+nav ul li a:hover{                                                                /*   (:hover) es una pseudo-clase quiere decir cuando el mouse pasa sobre el enlace. (nav ul li a:hover) selecciona los enlaces del menú cuando el usuario pasa el cursor sobre ellos.                         */
+    color: #cf0a0a;                                                             /*   (color) define el color del texto del enlace cuando el usuario pasa el cursor sobre él.                         */
+}                                                                                 /*   Cierra el bloque del nav ul li a:hover.                         */
+
+
+
+
+
+.clearfix{                                                                        /*  (.clearfix) es una clase CSS. Se usa para arreglar problemas con float.                          */
+    clear: both;                                                                  /*   (clear) evita que un elemento se coloque al lado de elementos flotantes. (both) significa: limpia float left y float right.                        */
+}                                                                                 /*   Cierra el bloque del .clearfix.                         */
+
+
+
+
+#content{                                                                          /*    (#content) es un ID de elemento. Se usa para aplicar estilos al contenedor principal del contenido. que es donde pondremos todo el contenido.                         */
+    float: left;                                                                   /*   (float) left. hace que el elemento se coloque a la izquierda. Esto permite que otro elemento (como aside) quede al lado derecho.                         */
+    width: 80%;                                                                    /*   (width) define el ancho del contenedor. Aquí ocupa 80% del ancho de la página.                         */
+    background: linear-gradient(135deg, #800020, #130404);                     /*   (background  linear-gradient) define el fondo del contenedor con un degradado.                          */
+    min-height: 500px;                                                             /*   (min-height) define la altura mínima del contenedor. el contenido nunca será menor a 500px.                          */
+    padding: 25px;                                                                 /*   (padding) agrega espacio interno al contenedor.                          */
+    border-radius: 8px;                                                            /*   (border-radius) redondea las esquinas del contenedor.                          */
+}                                                                                  /*   Cierra el bloque del #content.                         */
+
+
+
+
+.cambio-color{                                                                      /*   .cambio-color es un selector de clase. Se aplica a cualquier elemento HTML que tenga la clase "cambio-color":                         */
+
+display: block;                                                                     /*  (display) block. hace que el elemento se muestre como un bloque.                          */
+margin-left: auto;                                                                  /*  (margin-left) auto. centra el elemento horizontalmente hacia la derecha.                          */
+padding: 15px 30px;                                                                 /*  (padding) agrega espacio interno al elemento el primer valor es arriba/abajo y el segundo es izquierda/derecha.                          */
+font-size: 18px;                                                                    /*  (font-size) define el tamaño del texto.                          */
+color: white;                                                                     /*  (color) define el color del texto.                          */
+border-radius: 10px;                                                                /*  (border-radius) redondea las esquinas del elemento.                          */
+border: 3px solid transparent;                                                      /*  (border) define el borde del elemento. transparent se usa ya que el borde real sera el gradiente animado.                          */
+cursor: pointer;                                                                    /*  (cursor) pointer. cambia el cursor al pasar sobre el elemento.                          */
+background:                                                                         /*  (background) define el color del fondo del elemento.                          */
+linear-gradient(#040414,#050831) padding-box,                                   /*  (padding-box) significa que se aplica solo al interior del borde. esta parte define el fondo del elemento.                         */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                   /*  (border-box) significa que el gradiente cubre hasta el borde. esta parte define el borde del elemento.                          */
+background-size: 100% 100%, 300% 300%;                                               /*  (background-size) define el tamaño del fondos. los dos primeros son los del color del fondo y los dos ultimos son del borde                          */
+animation: moverBorde 4s linear infinite;                                            /*  (animation) define la animación del borde. Aplica una animación. Significa: moverBorde → nombre de la animación, 4s → dura 4 segundos, linear → velocidad constante, infinite → se repite para siempre                          */
+}                                                                                    /*   Cierra la clase .cambio-color.                         */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                              /*  (@keyframes) define una animación CSS.                      */
+
+0%{                                                                                  /*  Inicio de la animación. 0%  izquierda                    */
+background-position: 0% 50%;                                                         /*  Posición inicial del gradiente. el fondo empieza a la izquierda                     */
+}                                                                                    /*  Cierra el paso inicial.                      */
+
+50%{                                                                                 /*  Mitad de la animación. 50%  centro vertical                 */
+background-position: 100% 50%;                                                       /*  Posición a la mitad de la animación. El gradiente se mueve hacia la derecha.                      */
+}                                                                                    /*  Cierra el paso de la mitad.                      */
+
+100%{                                                                                /*  Final de la animación. 100%  derecha                   */
+background-position: 0% 50%;                                                         /*  Posición final del gradiente. el fondo vuelve a la izquierda                     */
+}                                                                                    /*  Cierra el paso final.                      */
+
+}                                                                                    /*  Cierra la animación.                      */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                 /*   (.cambio-color) es una clase que usaste en tu botón. :hover significa: cuando el mouse pasa encima del elemento                        */
+    transform: scale(1.05);                                                          /*   (transform) permite transformar un elemento. (scale()) cambia el tamaño. 1 es normal y 1.05 es un 5% más grande                        */
+}                                                                                    /*    Cierra el bloque de estilos.                        */
+
+
+
+
+.imagen-click{                                                                        /*   Esta es una clase para imágenes del html.                        */
+transition: transform 0.3s ease;                                                      /*   (transition) crea animaciones suaves cuando cambia una propiedad. (transform) anima, dura 0.3 segundos y ease es una función de temporización la hace mas suave.                       */
+cursor: pointer;                                                                      /*   (cursor: pointer) cambia el cursor del mouse al pasar sobre el elemento                        */
+}                                                                                     /*   Cierra el bloque de estilos.                        */
+
+
+
+
+aside{                                                                                 /*   (aside) es un elemento semántico del html para el contenido lateral                        */
+    float: left;                                                                       /*   (float: left) posiciona el elemento a la izquierda. Esto permite que otro elemento (como content) esté al lado.                        */
+    width: 20%;                                                                        /*   (width: 20%) le da un ancho del 20% al elemento                        */
+    min-height: 500px;                                                                 /*   (min-height) establece una altura mínima en este caso 500px                       */
+    padding: 20px;                                                                     /*   (padding) agrega espacio interior al elemento osea da un espacio entre el borde y el contenido                       */
+}                                                                                      /*   Cierra el bloque de estilos.                        */
+
+
+
+
+footer{                                                                                /*   (footer) es un elemento semántico del html para el pie de página es donde aparecen los titulos en el lado izquierdo de la pagina                       */
+    background: linear-gradient(135deg, #70a0f8, #000000);                         /*   (background: linear-gradient) crea un degradado de color en el footer                       */
+    color: rgb(160, 27, 27);                                                         /*   (color) establece el color del texto                        */
+    text-align: center;                                                                /*   (text-align: center) centra el texto                        */
+    height: 50px;                                                                      /*   (height: 50px) le da una altura de 50px al elemento                        */
+    line-height: 50px;                                                                 /*   (line-height: 50px) alinea el texto verticalmente                        */
+    margin-top: 10px;                                                                  /*   (margin-top: 10px) agrega un margen superior osea arriba del footer                       */
+}                                                                                      /*   Cierra el bloque de estilos.                        */
+
+
+
+
+
+
+
+
+
+.bloque {                                                                               /*   (bloque) es una clase para contenedores del html del index o inicio para mas claro                       */
+    display: flex;                                                                      /*   (display: flex) crea un contenedor flexible                        */
+    align-items: center;                                                                /*   (align-items: center) alinea los elementos verticalmente                        */
+    gap: 250px;                                                                         /*   (gap: 150px) agrega un espacio entre los elementos                        */
+    margin-bottom: 2px;                                                                 /*   (margin-bottom: 2px) agrega un margen en la parte inferior                        */
+}                                                                                       /*   Cierra el bloque de estilos.                        */
+
+
+
+
+.bloque img {                                                                           /*   (bloque img) es una clase para imágenes dentro de contenedores. rez, que es la primera imagen y reze que es la segunda del contenedor                       */
+    width: 150px;                                                                       /*   (width: 150px) le da un ancho de 150px al elemento                        */
+    border-radius: 8px;                                                                 /*   (border-radius: 8px) redondea las esquinas del elemento                        */
+}                                                                                       /*   Cierra el bloque de estilos.                        */
+
+
+
+
+.reze {                                                                                 /*   (reze) es una clase para elementos del html, es la imagen del footer                       */
+    margin: 10px;                                                                      /*   (margin: 10px) agrega un margen al elemento                        */
+    box-shadow: 0 0 0px rgb(97, 1, 1);                                               /*   (box-shadow: 0 0 0px rgb(97, 1, 1)) agrega una sombra al elemento                        */
+    background:  linear-gradient(135deg, #3b368a, #000000);                         /*   (background:  linear-gradient(135deg, #3b368a, #000000)) le da un fondo gradiente al elemento                        */
+    padding: 15px;                                                                      /*   (padding: 15px) agrega un espacio interno al elemento                        */
+    border-radius: 40px;                                                                /*   (border-radius: 40px) redondea las esquinas del elemento                        */
+    width: 200px;                                                                       /*   (width: 200px) le da un ancho de 200px al elemento                        */
+    border: 3px solid transparent;                                                      /*   (border: 3px solid transparent) le da un borde transparente al elemento                        */
+    background:                                                                         /*  (background) define el color del fondo del elemento.                          */
+    linear-gradient( #3b368a, #000000) padding-box,                                 /*  (padding-box) significa que se aplica solo al interior del borde. esta parte define el fondo del elemento.                         */
+    linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                   /*  (border-box) significa que el gradiente cubre hasta el borde. esta parte define el borde del elemento.                          */
+    background-size: 100% 100%, 300% 300%;                                               /*  (background-size) define el tamaño del fondos. los dos primeros son los del color del fondo y los dos ultimos son del borde                          */
+    animation: moverBorde 4s linear infinite;                                            /*  (animation) define la animación del borde. Aplica una animación. Significa: moverBorde → nombre de la animación, 4s → dura 4 segundos, linear → velocidad constante, infinite → se repite para siempre                          */
+}                                                                                        /*   Cierra el bloque de estilos.                        */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                  /*                            */
+                   
+0%{                                                                                      /*                            */
+background-position: 0% 50%;                                                             /*                            */
+}                                                                                        /*                            */
+
+50%{                                                                                     /*                            */
+background-position: 100% 50%;                                                           /*                            */
+}                                                                                        /*                            */
+
+100%{                                                                                    /*                            */
+background-position: 0% 50%;                                                             /*                            */
+}                                                                                        /*                            */
+
+}                                                                                        /*                            */
+
+
+
+
+
+
+.rez {
+    background:  linear-gradient(135deg, #3b368a, #000000);                           /*                            */
+    padding: 15px;                                                                        /*                            */
+    border-radius: 40px;                                                                  /*                            */
+    width: 200px;                                                                         /*                            */
+    border: 3px solid transparent;                                                        /*                            */
+    background:                                                                           /*                            */
+    linear-gradient( #3b368a, #000000) padding-box,                                   /*                            */
+    linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                     /*                            */
+    background-size: 100% 100%, 300% 300%;                                                 /*                            */
+    animation: moverBorde 4s linear infinite;                                              /*                            */
+
+}                                                                                          /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                     /*                            */
+
+0%{                                                                                         /*                            */
+background-position: 0% 50%;                                                                /*                            */
+}                                                                                           /*                            */
+
+50%{                                                                                        /*                            */
+background-position: 100% 50%;                                                              /*                            */
+}                                                                                           /*                            */
+
+100%{                                                                                       /*                            */
+background-position: 0% 50%;                                                                /*                            */
+}                                                                                           /*                            */
+
+}                                                                                           /*                            */
+
+.imagen-aparece{                                                                            /*                            */
+opacity: 0;                                                                                 /*                            */
+transform: scale(0.8);                                                                      /*                            */
+filter: blur(10px);                                                                         /*                            */
+animation: aparecerCeniza 2s ease forwards;                                                 /*                            */
+
+}                                                                                           /*                            */
+
+@keyframes aparecerCeniza{                                                                  /*                            */
+
+0%{                                                                                         /*                            */
+opacity: 0;                                                                                 /*                            */
+transform: scale(0.8);                                                                      /*                            */
+filter: blur(10px);                                                                         /*                            */
+}                                                                                           /*                            */
+
+50%{                                                                                        /*                            */
+opacity: 0.5;                                                                               /*                            */
+filter: blur(5px);                                                                          /*                            */
+}                                                                                           /*                            */
+
+100%{                                                                                       /*                            */
+opacity: 1;                                                                                 /*                            */
+transform: scale(1);                                                                        /*                            */
+filter: blur(0);                                                                            /*                            */
+}                                                                                           /*                            */
+
+}                                                                                           /*                            */
+
+
+.re {                                                                                        /*                            */
+    background: linear-gradient(135deg, #3b368a, #000000);                               /*                            */
+    padding: 0px;                                                                            /*                            */
+    border-radius: 40px;                                                                     /*                            */
+    width: 200px;                                                                            /*                            */
+    border: 3px solid transparent;                                                           /*                            */
+    background:                                                                              /*                            */
+    linear-gradient( #3b368a, #000000) padding-box,                                      /*                            */
+    linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                        /*                            */
+    background-size: 100% 100%, 300% 300%;                                                   /*                            */
+    animation: moverBorde 4s linear infinite;                                                /*                            */
+
+}                                                                                            /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                      /*                            */
+
+0%{                                                                                          /*                            */
+background-position: 0% 50%;                                                                 /*                            */
+}                                                                                            /*                            */
+
+50%{                                                                                         /*                            */
+background-position: 100% 50%;                                                               /*                            */
+}                                                                                            /*                            */
+
+100%{                                                                                        /*                            */
+background-position: 0% 50%;                                                                 /*                            */
+}                                                                                            /*                            */
+
+}                                                                                            /*                            */
+
+.tabla-web td{                                                                               /*                            */
+    width: 100%;                                                                             /*                            */
+    border-collapse: collapse;                                                               /*                            */
+    border: 1px solid #060101;                                                             /*                            */
+    padding: 10px;                                                                           /*                            */
+    text-align: center;                                                                      /*                            */
+    color: #000000;                                                                        /*                            */
+     table-layout: fixed;                                                                    /*                            */
+}                                                                                            /*                            */
+
+.tabla-web{                                                                                  /*                            */
+    width: 100%;                                                                             /*                            */
+}                                                                                            /*                            */
+
+.tabla-web th:first-child{                                                                   /*                            */
+    color: rgb(2, 5, 16);                                                                  /*                            */
+    background: linear-gradient(135deg, #160101, rgb(77, 21, 21));                       /*                            */
+}                                                                                            /*                            */
+
+.tabla-web th:last-child{                                                                    /*                            */
+    color: rgb(2, 5, 16);                                                                  /*                            */
+    background: linear-gradient(135deg, #160101, rgb(77, 21, 21));                       /*                            */
+}                                                                                            /*                            */
+
+.tabla-web th,
+.tabla-web td{                                                                               /*                            */
+    width: 50%;                                                                              /*                            */
+    padding: 15px;                                                                           /*                            */
+    text-align: center;                                                                      /*                            */
+}                                                                                            /*                            */
+
+.inicio img {                                                                                /*                            */
+font-size: 18px;                                                                             /*                            */
+color: white;                                                                              /*                            */
+border: 3px solid transparent;                                                               /*                            */
+cursor: pointer;                                                                             /*                            */
+    width: 450px;                                                                            /*                            */
+    padding: 5px;                                                                            /*                            */
+     border-radius: 40px;                                                                    /*                            */
+     background:                                                                             /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                       /*                            */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                            /*                            */
+background-size: 100% 100%, 300% 300%;                                                        /*                            */
+animation: moverBorde 4s linear infinite;                                                     /*                            */
+
+}                                                                                             /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                       /*                            */
+
+0%{                                                                                           /*                            */
+background-position: 0% 50%;                                                                  /*                            */
+}                                                                                             /*                            */
+
+50%{                                                                                          /*                            */
+background-position: 100% 50%;                                                                /*                            */
+}                                                                                             /*                            */
+
+100%{                                                                                         /*                            */
+background-position: 0% 50%;                                                                  /*                            */
+}                                                                                             /*                            */
+
+}                                                                                             /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                           /*                            */
+    transform: scale(1.05);                                                                    /*                            */
+}                                                                                              /*                            */
+
+.imagen-click{                                                                                 /*                            */
+transition: transform 0.3s ease;                                                               /*                            */
+cursor: pointer;                                                                               /*                            */
+}                                                                                              /*                            */
+
+
+
+.secu img {                                                                                    /*                            */
+    width: 450px;                                                                              /*                            */
+    border-radius: 40px;                                                                       /*                            */
+   margin-left: auto;                                                                          /*                            */
+    display: block;                                                                            /*                            */
+    font-size: 18px;                                                                           /*                            */
+color: white;                                                                                /*                            */
+border: 3px solid transparent;                                                                 /*                            */
+cursor: pointer;                                                                               /*                            */
+    padding: 5px;                                                                              /*                            */
+     background:                                                                               /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                         /*                            */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                              /*                            */
+background-size: 100% 100%, 300% 300%;                                                          /*                            */
+animation: moverBorde 4s linear infinite;                                                       /*                            */
+
+}                                                                                               /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                          /*                            */
+
+0%{                                                                                              /*                            */
+background-position: 0% 50%;                                                                     /*                            */
+}                                                                                                /*                            */
+
+50%{                                                                                             /*                            */
+background-position: 100% 50%;                                                                   /*                            */
+}                                                                                                /*                            */
+
+100%{                                                                                            /*                            */
+background-position: 0% 50%;                                                                     /*                            */
+}                                                                                                /*                            */
+
+}                                                                                                /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                             /*                            */
+    transform: scale(1.05);                                                                      /*                            */
+}                                                                                                /*                            */
+
+.imagen-click{                                                                                   /*                            */
+transition: transform 0.3s ease;                                                                 /*                            */
+cursor: pointer;                                                                                 /*                            */
+}                                                                                                /*                            */
+
+
+
+.terce img{                                                                                      /*                            */
+    width: 450px;                                                                                /*                            */
+    border-radius: 40px;                                                                         /*                            */
+    font-size: 18px;                                                                             /*                            */
+color: white;                                                                                  /*                            */
+border: 3px solid transparent;                                                                    /*                            */
+cursor: pointer;                                                                                  /*                            */
+    padding: 5px;                                                                                 /*                            */
+     background:                                                                                  /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                            /*                            */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                                 /*                            */
+background-size: 100% 100%, 300% 300%;                                                            /*                            */
+animation: moverBorde 4s linear infinite;                                                         /*                            */
+
+}                                                                                                 /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                          /*                            */
+
+0%{                                                                                              /*                            */
+background-position: 0% 50%;                                                                     /*                            */
+}                                                                                                /*                            */
+
+50%{                                                                                             /*                            */
+background-position: 100% 50%;                                                                   /*                            */
+}                                                                                                /*                            */
+
+100%{                                                                                            /*                            */
+background-position: 0% 50%;                                                                     /*                            */
+}                                                                                                /*                            */
+
+}                                                                                                /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                             /*                            */
+    transform: scale(1.05);                                                                      /*                            */
+}                                                                                                /*                            */
+
+.imagen-click{                                                                                   /*                            */
+transition: transform 0.3s ease;                                                                 /*                            */
+cursor: pointer;                                                                                 /*                            */
+}                                                                                                /*                            */
+
+
+.cuar img {                                                                                      /*                            */
+    width: 450px;                                                                                /*                            */
+    padding: 15px;                                                                               /*                            */
+    margin-left: auto;                                                                           /*                            */
+    display: block;                                                                              /*                            */
+font-size: 18px;                                                                                 /*                            */
+color: white;                                                                                  /*                            */
+border: 3px solid transparent;                                                                   /*                            */
+cursor: pointer;                                                                                 /*                            */
+    padding: 5px;                                                                                /*                            */
+     border-radius: 40px;                                                                        /*                            */
+     background:                                                                                 /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                           /*                            */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                                /*                            */
+background-size: 100% 100%, 300% 300%;                                                            /*                            */
+animation: moverBorde 4s linear infinite;                                                         /*                            */
+
+}                                                                                                 /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                           /*                            */
+
+0%{                                                                                               /*                            */
+background-position: 0% 50%;                                                                      /*                            */
+}                                                                                                 /*                            */
+
+50%{                                                                                              /*                            */
+background-position: 100% 50%;                                                                    /*                            */
+}                                                                                                 /*                            */
+
+100%{                                                                                             /*                            */
+background-position: 0% 50%;                                                                      /*                            */
+}                                                                                                 /*                            */
+
+}                                                                                                 /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                              /*                            */
+    transform: scale(1.05);                                                                       /*                            */
+}                                                                                                 /*                            */
+
+.imagen-click{                                                                                    /*                            */
+transition: transform 0.3s ease;                                                                  /*                            */
+cursor: pointer;                                                                                  /*                            */
+}                                                                                                 /*                            */
+
+
+
+.quin img{                                                                                        /*                            */
+    width: 450px;                                                                                 /*                            */
+font-size: 18px;                                                                                  /*                            */
+color: white;                                                                                   /*                            */
+border: 3px solid transparent;                                                                    /*                            */
+cursor: pointer;                                                                                  /*                            */
+    padding: 5px;                                                                                 /*                            */
+     border-radius: 40px;                                                                         /*                            */
+     background:                                                                                  /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                            /*                            */
+linear-gradient(270deg,#00ffff,#001ca8,#00ffff) border-box;                                 /*                            */
+background-size: 100% 100%, 300% 300%;                                                            /*                            */
+animation: moverBorde 4s linear infinite;                                                         /*                            */
+
+}                                                                                                 /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                           /*                            */
+
+0%{                                                                                               /*                            */
+background-position: 0% 50%;                                                                      /*                            */
+}                                                                                                 /*                            */
+
+50%{                                                                                              /*                            */
+background-position: 100% 50%;                                                                    /*                            */
+}                                                                                                 /*                            */
+
+100%{                                                                                             /*                            */
+background-position: 0% 50%;                                                                      /*                            */
+}                                                                                                 /*                            */
+
+}                                                                                                 /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                               /*                            */
+    transform: scale(1.05);                                                                        /*                            */
+}                                                                                                  /*                            */
+
+.imagen-click{                                                                                     /*                            */
+transition: transform 0.3s ease;                                                                   /*                            */
+cursor: pointer;                                                                                   /*                            */
+}                                                                                                  /*                            */
+
+
+.ini {                                                                                             /*                            */
+    display: flex;                                                                                 /*                            */
+    align-items: center;                                                                           /* centra verticalmente       */
+    justify-content: center;                                                                       /* opcional si quieres todo centrado */
+    gap: 50px;                                                                                     /*                            */
+    
+}                                                                                                   /*                            */
+
+.se {                                                                                               /*                            */
+    display: flex;                                                                                  /*                            */
+    align-items: center;                                                                            /* centra verticalmente */
+    justify-content: flex-start;                                                                    /* todo hacia la izquierda */
+    gap: 40px;                                                                                      /*                            */
+}                                                                                                   /*                            */
+
+
+
+.app  {                                                                                             /*                            */
+     width: 550px;                                                                                  /*                            */
+     border-radius: 40px;                                                                           /*                            */
+     height: 400px;                                                                                 /*                            */
+font-size: 18px;                                                                                    /*                            */
+color: white;                                                                                     /*                            */
+border: 3px solid transparent;                                                                      /*                            */
+cursor: pointer;                                                                                    /*                            */
+    padding: 5px;                                                                                   /*                            */
+     background:                                                                                    /*                            */
+     linear-gradient(#310404,#310404) padding-box,                                              /*                            */
+linear-gradient(270deg,#ff00ff,#8a2be2,#ff00ff) border-box;                                   /*                            */
+background-size: 100% 100%, 300% 300%;                                                               /*                            */
+animation: moverBorde 4s linear infinite;                                                            /*                            */
+
+}                                                                                                    /*                            */
+
+/* animación del borde */
+
+@keyframes moverBorde {                                                                               /*                            */
+
+0%{                                                                                                   /*                            */
+background-position: 0% 50%;                                                                          /*                            */
+}                                                                                                     /*                            */
+
+50%{                                                                                                  /*                            */
+background-position: 100% 50%;                                                                        /*                            */
+}                                                                                                     /*                            */
+
+100%{                                                                                                 /*                            */
+background-position: 0% 50%;                                                                          /*                            */
+}                                                                                                     /*                            */
+
+}                                                                                                     /*                            */
+
+
+/* efecto cuando pasas el mouse */
+
+.cambio-color:hover{                                                                                   /*                            */
+    transform: scale(1.05);                                                                            /*                            */
+}                                                                                                      /*                            */
+
+.imagen-click{                                                                                         /*                            */
+transition: transform 0.3s ease;                                                                       /*                            */
+cursor: pointer;                                                                                       /*                            */
+}                                                                                                      /*                            */
+
+
+.isa img {                                                                                             /*                            */
+     width: 400px;                                                                                     /*                            */
+    border-radius: 8px;                                                                                /*                            */
+    padding: 15px;                                                                                     /*                            */
+     border-radius: 40px;                                                                              /*                            */
+
+}                                                                                                      /*                            */
+
+.bella img{                                                                                            /*                            */
+        width: 500px;                                                                                  /*                            */
+        height: 500px;                                                                                 /*                            */
+}                                                                                                      /*                            */
+
+.isabe {                                                                                               /*                            */
+     width: 100px;                                                                                     /*                            */
+     height: 100px;                                                                                    /*                            */
+
+}                                                                                                      /*                            */
+
+
+
+h1 {                                                                                                   /*                            */
+    display: flex;                                                                                     /*                            */
+    align-items: center;                                                                               /*                            */
+    justify-content: center;                                                                           /*                            */
+    gap: 10px;                                                                                         /*                            */
+}                                                                                                      /*                            */
+
+.ap  {                                                                                                 /*                            */
+    width: 600px;                                                                                      /*                            */
+    height: 900px ;                                                                                    /*                            */
+    border-radius: 70px;                                                                               /*                            */
+    gap: 30px;                                                                                         /*                            */
+    border-radius: 4px;                                                                                /*                            */
+    padding: 15px;                                                                                     /*                            */
+     border-radius: 40px;                                                                              /*                            */
+
+}                                                                                                      /*                            */
+
+/* CAJA DE LA CALCULADORA */
+
+.calculadora{                                                                                          /*                            */
+background: linear-gradient(180deg,#0b0b2e,#000000);                                               /*                            */
+padding: 20px;                                                                                          /*                            */
+border-radius: 12px;                                                                                    /*                            */
+width: fit-content;                                                                                     /*                            */
+box-shadow: 0 0 10px #001ca8;                                                                         /*                            */
+margin-top: 20px;                                                                                       /*                            */
+
+}                                                                                                       /*                            */
+
+
+/* INPUTS DE NUMEROS */
+
+.calculadora input{                                                                                     /*                            */
+
+width: 120px;                                                                                           /*                            */
+padding: 8px;                                                                                           /*                            */
+margin: 5px;                                                                                            /*                            */
+border-radius: 8px;                                                                                     /*                            */
+border: 2px solid #001ca8;                                                                            /*                            */
+background: #0b0b2e;                                                                                  /*                            */
+color: white;                                                                                         /*                            */
+text-align: center;                                                                                     /*                            */
+
+}                                                                                                       /*                            */
+
+
+/* BOTONES */
+
+.calculadora button{                                                                                     /*                            */
+padding: 10px 20px;                                                                                      /*                            */
+margin: 5px;                                                                                             /*                            */
+font-size: 15px;                                                                                         /*                            */
+color: white;                                                                                          /*                            */
+border-radius: 8px;                                                                                       /*                            */
+border: none;                                                                                             /*                            */
+cursor: pointer;                                                                                          /*                            */
+background: linear-gradient(135deg,#192c8d,#02052a);                                                  /*                            */
+transition: transform 0.2s;                                                                               /*                            */
+
+}                                                                                                         /*                            */
+
+
+/* EFECTO CUANDO PASAS EL MOUSE */
+
+.calculadora button:hover{                                                                                /*                            */
+
+transform: scale(1.05);                                                                                   /*                            */
+
+}                                                                                                         /*                            */
+
+
+/* RESULTADO */
+
+#resultado{                                                                                                /*                            */
+margin-top: 15px;                                                                                          /*                            */
+padding: 10px;                                                                                             /*                            */
+background: #000033;                                                                                     /*                            */
+color: #112791;                                                                                          /*                            */
+border-radius: 8px;                                                                                        /*                            */
+font-weight: bold;                                                                                         /*                            */
+text-align: center;                                                                                        /*                            */
+
+}                                                                                                          /*                            */
+
+
+.formulario-web{                                                                                           /*                            */
+    display: flex;                                                                                         /*                            */
+    flex-direction: column;                                                                                /*                            */
+}                                                                                                          /*                            */
+
+.formulario-web input,
+.formulario-web textarea,
+.formulario-web select{                                                                                    /*                            */
+    margin-bottom: 10px;                                                                                   /*                            */
+    padding: 8px;                                                                                          /*                            */
+    border-radius: 5px;                                                                                     /*                            */
+    border: none;                                                                                           /*                            */
+    background: #9e2e2e;                                                                                  /*                            */
+    color: #2f0101;                                                                                       /*                            */
+}                                                                                                           /*                            */
+
+.formulario-web input[type="submit"]{                                                                       /*                            */
+    background: linear-gradient(135deg, #0c020c, #a80707);                                              /*                            */
+    color: rgb(18, 2, 2);                                                                                 /*                            */
+    cursor: pointer;                                                                                        /*                            */
+}                                                                                                           /*                            */
+
+
+
